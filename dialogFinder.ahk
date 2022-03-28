@@ -150,8 +150,6 @@ loop
 
       if (dialogActualAddress != dialogLastAddress && dialogActualAddress != "")
       {
-        GuiControl, Text, Overlay,
-        Gui, Show
 
         ;; Read string at address and sanitize before sending for translation
         dialogText := dqx.readString(dialogActualAddress, sizeBytes := 0, encoding := "utf-8")
@@ -163,7 +161,7 @@ loop
 
         RegExReplace(dialogText, "[^a-zA-Z0-9,'.!?:;&#_-~ー～"" 　\Q/\()[]`a\E]",, count)
 
-        checkNum := Round(StrLen(dialogText)/4)
+        checkNum := StrLen(dialogText)/4
         if (count <= checkNum)
             continue
 
