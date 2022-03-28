@@ -160,7 +160,17 @@ loop
         dialogText := RegExReplace(dialogText, "(<.+?>)", "")
         dialogText := StrReplace(dialogText, "「", "")
         dialogText := StrReplace(dialogText, "", "")
+
+        RegExReplace(dialogText, "[^a-zA-Z0-9,'.!?:;&#_-~ー～"" 　\Q/\()[]`a\E]",, count)
+
+        checkNum := Round(StrLen(dialogText)/4)
+        if (count <= checkNum)
+            continue
+
         dialogText := translate(dialogText, "true")
+
+        GuiControl, Text, Overlay,
+        Gui, Show
 
         ;; Iterate through each line in the dialog if line by line disabled.
         ;; Otherwise, spit all the text out at once.
