@@ -13,7 +13,7 @@ Process, Close, dialogFinder.exe
 ;=== Auto update ============================================================
 ;; Get latest version number from Github
 oWhr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
-url := "https://api.github.com/repos/jmctune/ahkmon/releases/latest"
+url := "https://api.github.com/repos/Sevithian/ahkmon/releases/latest"
 oWhr.Open("GET", url, 0)
 oWhr.Send()
 oWhr.WaitForResponse()
