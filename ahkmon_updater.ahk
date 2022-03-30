@@ -26,13 +26,13 @@ sleep 100
 FileMove, %A_ScriptDir%\ahkmon_updater.exe, %A_ScriptDir%\tmp\ahkmon_updater.exe
 
 ;; Download latest version
-url := "https://github.com/jmctune/ahkmon/releases/latest/download/ahkmon.zip"
+url := "https://github.com/Sevithian/ahkmon/releases/latest/download/ahkmon.zip"
 downloadFile(url)
 GuiControl,, Progress, 25
 
 ;; Grab release notes + new version number
 oWhr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
-url := "https://api.github.com/repos/jmctune/ahkmon/releases/latest"
+url := "https://api.github.com/repos/Sevithian/ahkmon/releases/latest"
 oWhr.Open("GET", url, 0)
 oWhr.Send()
 oWhr.WaitForResponse()
@@ -82,7 +82,7 @@ else
   message := "UPDATE FAILED! Version mismatch. Please update ahkmon manually."
   GuiControl,, Notes, % message
   FileDelete, %A_ScriptDir%\ahkmon.zip  ;; Delete the old file if it exists
-  Run, https://github.com/jmctune/ahkmon/releases/latest
+  Run, https://github.com/Sevithian/ahkmon/releases/latest
   Sleep 5000
   ExitApp
 }
