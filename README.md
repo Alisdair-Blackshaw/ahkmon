@@ -2,7 +2,7 @@
 Captures text for the popular game "Dragon Quest X" (DQX).
 
 ## Documentation
-Check out the [wiki](https://github.com/jmctune/ahkmon/wiki) for information on how to use ahkmon.
+Check out either the [original wiki](https://github.com/jmctune/ahkmon/wiki) or the [newly maintainedwiki](https://dqxabbey.com/pages/utilities/translation_tools.html) for information on how to use ahkmon.
 
 https://user-images.githubusercontent.com/17505625/120052947-5c340700-bfed-11eb-80d8-439304bacaaa.mp4
 
